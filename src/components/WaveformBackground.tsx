@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 
-const BG_COLOR = "#0a0e12";
+const BG_COLOR = "#091827";
 const ROW_HEIGHT = 48;
-const BASE_SPEED = 8;
+const BASE_SPEED = Math.random() * 100 - Math.random() * 50 + 20; // Base speed with more variation
 
 type TraceRow = {
   phase: number;
@@ -26,7 +26,7 @@ function makeRow(seed: number, intensity: number = 1, screenWidth: number = 1200
     return s / 233280;
   };
 
-  const packetCount = 8 + Math.floor(rand() * 6); // More packets for even distribution
+  const packetCount = 8 + Math.floor(rand() * 12); // More packets for even distribution
 
   // Distribute packets evenly across screen width
   const packets = Array.from({ length: packetCount }, (_, i) =>
@@ -42,7 +42,7 @@ function makeRow(seed: number, intensity: number = 1, screenWidth: number = 1200
   return {
     phase: rand() * Math.PI * 2,
     freq: 0.005 + rand() * 0.025,
-    amp: (3 + rand() * 12) * intensity,
+    amp: (3 + rand() * 30) * intensity,
     speed: BASE_SPEED * (0.7 + rand() * 1.3) * intensity,
     packets,
     packetSpeeds,
