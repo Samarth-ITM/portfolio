@@ -27,6 +27,7 @@ export type Project = {
   openCta?: { label: string; href: string };
   tagline: string;
   description: RichSpan[];
+  descriptionShort?: RichSpan[];
   tech: string[];
   links?: ProjectLink[];
   closedNote?: string;
@@ -58,6 +59,9 @@ export const projects: Project[] = [
         " The long-term goal is to understand high-performance networking from first principles rather than relying on existing frameworks.",
       ),
     ],
+    descriptionShort: [
+      t("A networking experimentation project focused on pushing low-end hardware to its absolute packet-processing limits."),
+    ],
     tech: ["Rust", "Linux", "Debian Minimal", "UDP Sockets", "Networking", "Performance Engineering"],
   },
   {
@@ -83,6 +87,9 @@ export const projects: Project[] = [
         " I continue to actively archive, organize, and maintain workflows, treating the repository as a long-term knowledge base for automation builders and engineers.",
       ),
     ],
+    descriptionShort: [
+      t("A personal archive containing more than 10,500 preserved n8n workflows with metadata, documentation, and importable definitions."),
+    ],
     tech: ["Python", "n8n", "Automation", "Data Archiving", "Open Source", "Knowledge Management"],
   },
   {
@@ -102,6 +109,9 @@ export const projects: Project[] = [
       t(
         " Rather than treating token usage as an afterthought, TokenMiser treats every token as a measurable resource that should be accounted for.",
       ),
+    ],
+    descriptionShort: [
+      t("An experimentation platform focused on measuring, optimizing, and reducing token usage across LLM workflows."),
     ],
     tech: ["Python", "LLMs", "Prompt Engineering", "Optimization", "AI Infrastructure"],
   },
@@ -125,6 +135,9 @@ export const projects: Project[] = [
         " My contributions focused on expanding gameplay content and improving the learning experience for new developers.",
       ),
     ],
+    descriptionShort: [
+      t("An educational game that teaches Git concepts through mystery-driven investigations and real Git commands."),
+    ],
     tech: ["Git", "Open Source", "TypeScript", "Game Design"],
   },
   {
@@ -147,6 +160,9 @@ export const projects: Project[] = [
         " The project was built primarily to understand networking fundamentals, state management, concurrency, and backend system design rather than banking itself.",
       ),
     ],
+    descriptionShort: [
+      t("A secure ATM simulation implementing client-server architecture, authentication, transaction logging, and persistent storage."),
+    ],
     tech: ["Python", "Sockets", "MySQL", "Monitoring", "Distributed Systems"],
   },
   {
@@ -167,6 +183,9 @@ export const projects: Project[] = [
       t(
         " The project provided practical exposure to how modern LLM-based systems behave outside controlled benchmark environments and highlighted the gap between model capability and production reliability.",
       ),
+    ],
+    descriptionShort: [
+      t("Evaluated a production AI assistant through adversarial testing, jailbreak attempts, and long-session conversational stress tests."),
     ],
     tech: [
       "LLMs",

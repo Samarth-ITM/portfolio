@@ -116,7 +116,10 @@ export function ProjectCard({ project: p }: { project: Project }) {
       ) : null}
 
       <p className="card-tagline">{p.tagline}</p>
-      <p className="card-desc">{renderRich(p.description)}</p>
+      <p className="card-desc card-desc-full">{renderRich(p.description)}</p>
+      {p.descriptionShort && (
+        <p className="card-desc card-desc-short">{renderRich(p.descriptionShort)}</p>
+      )}
 
       <div className="card-footer">
         <div className="card-tech">
